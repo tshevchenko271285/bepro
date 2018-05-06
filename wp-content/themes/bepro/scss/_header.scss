@@ -1,0 +1,9 @@
+.header {
+  background: #3853d8;
+  &_logo {
+    border:1px solid red;
+    font-family: playfairdisplay-blackItalic;
+    font-size: 24px;
+    color: #fff;
+  }
+}

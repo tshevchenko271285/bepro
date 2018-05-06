@@ -15,12 +15,12 @@ wp-content/plugins/akismet/
 wp-content/themes/twentyfifteen/
 wp-content/themes/twentyseventeen/
 wp-content/themes/twentysixteen/
+wp-content/themes/bepro/.sass-cache/
 
 _temp/
 .idea/
 wp-admin/
 wp-includes/
-
 
 /.htaccess
 /license.txt
