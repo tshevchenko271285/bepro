@@ -1,0 +1,25 @@
+/*
+.container {
+  @media(min-width: 1200px) {max-width: 1170px;}
+}*/
+body {
+  background: #ccc;
+  position: relative;
+  min-width: 320px;
+}
+.container-small {
+    max-width: 1170px;
+    margin: 0 auto;
+    @media(max-width: 1199px) {width: 960px;}
+    @media(max-width: 991px) {width: 720px;}
+    @media(max-width: 767px) {width: 540px;}
+    @media(max-width: 575px) {
+      width: 100%;
+      padding: 0 15px;
+    }
+    &:after {
+      content: '';
+      clear: both;
+      display: block;
+    }
+}

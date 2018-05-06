@@ -1,9 +1,92 @@
 .header {
+  padding-bottom: 10px;
+  font-family: montserrat-regular;
+  font-size: 12px;
+  color: #fff;
   background: #3853d8;
   &_logo {
-    border:1px solid red;
+    float: left;
+    margin-top: 20px;
     font-family: playfairdisplay-blackItalic;
     font-size: 24px;
+    text-transform: capitalize;
     color: #fff;
+  }
+  &_boorger {
+    display: none;
+    float: right;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+    width: 35px;
+    height: 25px;
+    padding: 5px 0;
+    border: 1px solid #fff;
+    border-radius: 3px;
+    @media(max-width: 991px) {
+      display: flex;
+    }
+    span {
+      height: 2px;
+      width: 70%;
+      background: #fff;
+    }
+  }
+  &_buttons {
+    float: right;
+    margin-top: 13px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @media(max-width: 991px) {
+      float: none;
+      clear: both;
+      margin: 0 auto;
+    }
+    &-left {
+      display: flex;
+      align-items: center;
+      margin-right: 52px;
+      padding-top: 5px;
+      a {
+        display: block;
+        margin-right: 21px;
+        text-transform: uppercase;
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+    }
+    &-right {
+      display: flex;
+      align-items: center;
+      a {
+        display: block;
+        margin-right: 37px;
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+      i {
+        font-size: 30px;
+        position: relative;
+        span {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 19px;
+          height: 19px;
+          position: absolute;
+          bottom: 0px;
+          right: -2px;
+          border-radius: 50%;
+          font-family: montserrat-bold;
+          font-size: 10px;
+          color: #3853d8;
+          background: #fff;
+        }
+      }
+    }
   }
 }

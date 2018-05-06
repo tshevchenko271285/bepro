@@ -18,7 +18,11 @@
 
 <body <?php body_class(); ?>>
 <header class="header">
-    <a href="<?php bloginfo('url');?>" class="header_logo"><?php bloginfo('name');?></a>
+    <div class="container-small">
+        <div class="header_logo">
+            <a href="<?php bloginfo('url');?>"><?php bloginfo('name');?></a>
+        </div>
+        <div class="header_menu-outer"></div>
         <?php
             wp_nav_menu( array(
                 'theme_location'  => 'menu-header',
@@ -31,12 +35,20 @@
                 'echo'            => true,
             ) );
         ?>
-    <div class="header_account">
-        <a href="#">Log in</a>
-        <a href="#">Sing Up</a>
-    </div>
-    <div class="header_buttons">
-        <a href="#">Cart</a>
-        <a href="#">Search</a>
+        <div class="header_boorger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="header_buttons">
+            <div class="header_buttons-left">
+                <a href="<?php echo wp_login_url();?>">Log in</a>
+                <a href="<?php echo wp_registration_url();?>">Sign Up</a>
+            </div>
+            <div class="header_buttons-right">
+                <a href="#"><i class="ion-bag"><span>2</span></i></a>
+                <a href="#"><i class="ion-ios-search"></i></a>
+            </div>
+        </div>
     </div>
 </header>
