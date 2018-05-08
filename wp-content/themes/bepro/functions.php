@@ -23,3 +23,9 @@ if (is_file( get_template_directory() . '/inc/bepro-sidebars.php') )
  */
 if (is_file( get_template_directory() . '/inc/widgets/bepro-widgets.php') )
     require get_template_directory() . '/inc/widgets/bepro-widgets.php';
+
+/**
+ * Required Custom Post Types
+ */
+if (is_file( get_template_directory() . '/inc/bepro-post-types.php') )
+    require get_template_directory() . '/inc/bepro-post-types.php';
