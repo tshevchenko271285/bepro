@@ -117,4 +117,29 @@
       }
     }
   }
+  &_paysystem {
+    margin-top: 40px;
+    @media(max-width: 767px) {margin-top: 20px;}
+    span {
+      display: inline-block;
+      margin-right: 3px;
+      width: 32px;
+      height: 20px;
+    }
+    &__visa {
+      background-image: url('images/pay-visa.png');
+    }
+    &__pp {
+      background-image: url('images/pay-pp.jpg');
+    }
+    &__master {
+      background-image: url('images/pay-master.jpg');
+    }
+    &__maestro {
+      background-image: url('images/pay-maestro.jpg');
+    }
+    &__amd {
+      background-image: url('images/pay-amd.png');
+    }
+  }
 }

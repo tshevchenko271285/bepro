@@ -377,5 +377,25 @@ h6 {
           margin: 10px auto; } }
       .footer_form input[type="submit"]:hover {
         cursor: pointer; }
+  .footer_paysystem {
+    margin-top: 40px; }
+    @media (max-width: 767px) {
+      .footer_paysystem {
+        margin-top: 20px; } }
+    .footer_paysystem span {
+      display: inline-block;
+      margin-right: 3px;
+      width: 32px;
+      height: 20px; }
+    .footer_paysystem__visa {
+      background-image: url("images/pay-visa.png"); }
+    .footer_paysystem__pp {
+      background-image: url("images/pay-pp.jpg"); }
+    .footer_paysystem__master {
+      background-image: url("images/pay-master.jpg"); }
+    .footer_paysystem__maestro {
+      background-image: url("images/pay-maestro.jpg"); }
+    .footer_paysystem__amd {
+      background-image: url("images/pay-amd.png"); }
 
 /*# sourceMappingURL=style.css.map */

@@ -22,11 +22,6 @@ class beproWidgetSocials extends WP_Widget {
         $linkedin = isset( $instance[ 'linkedin' ] ) ? $instance[ 'linkedin' ] : '';
 
         echo $args['before_widget'];
-        if ( ! empty( $title ) )
-            echo $args['before_title'] . $title . $args['after_title'];
-
-        if ( ! empty( $facebook ) )
-            echo '';
         ?>
         <div class="footer_socials">
             <?php if( ! empty( $facebook ) ) : ?>
