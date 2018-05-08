@@ -1,0 +1,120 @@
+.footer {
+  font-family: montserrat-regular;
+  background: #363637;
+  color: #fff;
+  h6 {
+    margin-bottom: 29px;
+  }
+  p {
+    font-size: 12px;
+  }
+  &_outer {
+    padding-top: 30px;
+    padding-bottom: 43px;
+    &:after {
+      content: '';
+      display: block;
+      clear: both;
+    }
+  }
+  &_left {
+    float: left;
+    padding-left: 25px;
+    @media(max-width: 1199px) { padding-left: 0; }
+    @media(max-width: 991px) {
+      float: none;
+      text-align: center;
+    }
+  }
+  &_center {
+    float: left;
+    margin-left: 150px;
+    @media(max-width: 1199px) { margin-left: 50px; }
+    @media(max-width: 991px) {
+      float: none;
+      margin-left: 0;
+    }
+  }
+  &_right {
+    float: right;
+    min-width: 263px;
+    margin-top: 10px;
+    @media(max-width: 1199px) { min-width: auto; }
+    @media(max-width: 991px) {
+      float: none;
+      text-align: center;
+    }
+    h6 {@media(max-width: 991px) {margin: 15px auto 15px;}}
+  }
+  &_logo {
+    margin-top: 2px;
+    margin-bottom: 50px;
+    font-family: playfairdisplay-blackItalic;
+    font-size: 24px;
+    color: #fff;
+    text-transform: capitalize;
+    @media(max-width: 991px) {margin-bottom: 20px;}
+  }
+  &_socials {
+    color: #999999;
+    @media(max-width: 991px) {margin-bottom: 15px;}
+    a {
+      margin-right: 16px;
+      &:hover {
+        color: #fff;
+      }
+    }
+  }
+  &_menu {
+    display: flex;
+    justify-content: flex-start;
+    margin: 0 auto;
+    padding-top: 5px;
+    list-style: none;
+    @media(max-width: 991px) {justify-content: center;}
+    @media(max-width: 767px) {flex-wrap: wrap;}
+    .menu-item {
+      margin-right: 35px;
+      font-size: 14px;
+      text-transform: uppercase;
+      color: #fff;
+      @media(max-width: 767px) {margin: 10px 15px;}
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+  &_form {
+    margin-top: 60px;
+    font-family: montserrat-regular;
+    font-size: 12px;
+    @media(max-width: 991px) {
+      margin: 25px auto;
+      text-align: center;
+    }
+    h6 {
+      margin-bottom: 27px;
+    }
+    input[type="email"],
+    input[type="text"] {
+      display: inline-block;
+      padding: 11px 30px;
+      min-width: 320px;
+      @media(max-width: 767px) {min-width: 280px;}
+    }
+    input[type="submit"] {
+      display: inline-block;
+      margin-left: 20px;
+      padding: 10px 48px;
+      color: #363637;
+      background: #fff;
+      @media(max-width: 767px) {
+        display: block;
+        margin: 10px auto;
+      }
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+}

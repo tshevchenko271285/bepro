@@ -5,5 +5,6 @@
     }
 
     register_nav_menus( array(
-        'menu-header' => esc_html__( 'Primary', 'bepro' )
+        'menu-header' => esc_html__( 'Primary', 'bepro' ),
+        'menu-footer' => esc_html__( 'Footer', 'bepro' ),
     ) );
