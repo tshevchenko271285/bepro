@@ -14,10 +14,10 @@ a:active, a:hover, a:visited, a:link {
   text-decoration: none;
   color: inherit; }
 
-input, textarea {
+input, textarea, button {
   border: 0;
   -webkit-appearance: none; }
-  input:active, input:hover, input:focus, textarea:active, textarea:hover, textarea:focus {
+  input:active, input:hover, input:focus, textarea:active, textarea:hover, textarea:focus, button:active, button:hover, button:focus {
     outline: 0;
     outline-offset: 0; }
 
@@ -288,30 +288,33 @@ h6 {
   .banner-home_slider img {
     width: 100%;
     height: auto; }
-  .banner-home_slider .owl-nav {
+  .banner-home_slider .owl-nav button.owl-prev, .banner-home_slider .owl-nav button.owl-next {
     position: absolute;
-    top: 43%;
-    left: 100px;
-    right: 100px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between; }
+    top: 43%; }
+  .banner-home_slider .owl-nav button.owl-prev {
+    left: 100px; }
     @media (max-width: 991px) {
-      .banner-home_slider .owl-nav {
-        left: 50px;
+      .banner-home_slider .owl-nav button.owl-prev {
+        left: 50px; } }
+    @media (max-width: 767px) {
+      .banner-home_slider .owl-nav button.owl-prev {
+        left: 15px; } }
+  .banner-home_slider .owl-nav button.owl-next {
+    right: 100px; }
+    @media (max-width: 991px) {
+      .banner-home_slider .owl-nav button.owl-next {
         right: 50px; } }
     @media (max-width: 767px) {
-      .banner-home_slider .owl-nav {
-        left: 15px;
+      .banner-home_slider .owl-nav button.owl-next {
         right: 15px; } }
-    .banner-home_slider .owl-nav button.owl-prev, .banner-home_slider .owl-nav button.owl-next {
-      font-size: 55px;
-      color: #fff; }
-      @media (max-width: 767px) {
-        .banner-home_slider .owl-nav button.owl-prev, .banner-home_slider .owl-nav button.owl-next {
-          font-size: 25px; } }
-    .banner-home_slider .owl-nav button.disabled {
-      color: #999999; }
+  .banner-home_slider .owl-nav button.owl-prev, .banner-home_slider .owl-nav button.owl-next {
+    font-size: 55px;
+    color: #fff; }
+    @media (max-width: 767px) {
+      .banner-home_slider .owl-nav button.owl-prev, .banner-home_slider .owl-nav button.owl-next {
+        font-size: 25px; } }
+  .banner-home_slider .owl-nav button.disabled {
+    color: #999999; }
 .banner-home_item {
   position: relative; }
 .banner-home_content {
