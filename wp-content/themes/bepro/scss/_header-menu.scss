@@ -45,6 +45,9 @@
       margin-right: 30px;
       padding-bottom: 10px;
       letter-spacing: 0.4px;
+      &:last-child {
+        margin-right: 0;
+      }
       .sub-menu {
         visibility: hidden;
         opacity: 0;

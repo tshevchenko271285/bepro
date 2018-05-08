@@ -6,3 +6,11 @@ a:active, a:hover, a:visited, a:link {
   text-decoration: none;
   color: inherit;
 }
+input, textarea {
+  border: 0;
+  -webkit-appearance: none;
+  &:active, &:hover, &:focus {
+    outline: 0;
+    outline-offset: 0;
+  }
+}

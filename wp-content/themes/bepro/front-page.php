@@ -1,5 +1,5 @@
 <?php get_header(); ?>
 
-<div style="height: 500px;"></div>
+<div style="height: 200px;"></div>
 
 <?php get_footer(); ?>

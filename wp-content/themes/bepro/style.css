@@ -13,6 +13,13 @@ a:active, a:hover, a:visited, a:link {
   text-decoration: none;
   color: inherit; }
 
+input, textarea {
+  border: 0;
+  -webkit-appearance: none; }
+  input:active, input:hover, input:focus, textarea:active, textarea:hover, textarea:focus {
+    outline: 0;
+    outline-offset: 0; }
+
 /*
 .container {
   @media(min-width: 1200px) {max-width: 1170px;}
@@ -43,6 +50,10 @@ body {
     clear: both;
     display: block; }
 
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1310px; } }
+
 /*
 ** Fonts
 */
@@ -67,6 +78,12 @@ body {
 @font-face {
   font-family: poppins-semibold;
   src: url("fonts/poppins-semibold.ttf"); }
+h6 {
+  font-family: montserrat-regular;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.7px; }
+
 .header {
   padding-bottom: 10px;
   font-family: montserrat-regular;
@@ -197,6 +214,8 @@ body {
       margin-right: 30px;
       padding-bottom: 10px;
       letter-spacing: 0.4px; }
+      .header_menu .menu .menu-item:last-child {
+        margin-right: 0; }
       .header_menu .menu .menu-item .sub-menu {
         visibility: hidden;
         opacity: 0;
@@ -236,5 +255,127 @@ body {
     .header_menu__open .menu {
       left: 0px;
       z-index: 2; }
+
+.footer {
+  font-family: montserrat-regular;
+  background: #363637;
+  color: #fff; }
+  .footer h6 {
+    margin-bottom: 29px; }
+  .footer p {
+    font-size: 12px; }
+  .footer_outer {
+    padding-top: 30px;
+    padding-bottom: 43px; }
+    .footer_outer:after {
+      content: '';
+      display: block;
+      clear: both; }
+  .footer_left {
+    float: left;
+    padding-left: 25px; }
+    @media (max-width: 1199px) {
+      .footer_left {
+        padding-left: 0; } }
+    @media (max-width: 991px) {
+      .footer_left {
+        float: none;
+        text-align: center; } }
+  .footer_center {
+    float: left;
+    margin-left: 150px; }
+    @media (max-width: 1199px) {
+      .footer_center {
+        margin-left: 50px; } }
+    @media (max-width: 991px) {
+      .footer_center {
+        float: none;
+        margin-left: 0; } }
+  .footer_right {
+    float: right;
+    min-width: 263px;
+    margin-top: 10px; }
+    @media (max-width: 1199px) {
+      .footer_right {
+        min-width: auto; } }
+    @media (max-width: 991px) {
+      .footer_right {
+        float: none;
+        text-align: center; } }
+    @media (max-width: 991px) {
+      .footer_right h6 {
+        margin: 15px auto 15px; } }
+  .footer_logo {
+    margin-top: 2px;
+    margin-bottom: 50px;
+    font-family: playfairdisplay-blackItalic;
+    font-size: 24px;
+    color: #fff;
+    text-transform: capitalize; }
+    @media (max-width: 991px) {
+      .footer_logo {
+        margin-bottom: 20px; } }
+  .footer_socials {
+    color: #999999; }
+    @media (max-width: 991px) {
+      .footer_socials {
+        margin-bottom: 15px; } }
+    .footer_socials a {
+      margin-right: 16px; }
+      .footer_socials a:hover {
+        color: #fff; }
+  .footer_menu {
+    display: flex;
+    justify-content: flex-start;
+    margin: 0 auto;
+    padding-top: 5px;
+    list-style: none; }
+    @media (max-width: 991px) {
+      .footer_menu {
+        justify-content: center; } }
+    @media (max-width: 767px) {
+      .footer_menu {
+        flex-wrap: wrap; } }
+    .footer_menu .menu-item {
+      margin-right: 35px;
+      font-size: 14px;
+      text-transform: uppercase;
+      color: #fff; }
+      @media (max-width: 767px) {
+        .footer_menu .menu-item {
+          margin: 10px 15px; } }
+      .footer_menu .menu-item:last-child {
+        margin-right: 0; }
+  .footer_form {
+    margin-top: 60px;
+    font-family: montserrat-regular;
+    font-size: 12px; }
+    @media (max-width: 991px) {
+      .footer_form {
+        margin: 25px auto;
+        text-align: center; } }
+    .footer_form h6 {
+      margin-bottom: 27px; }
+    .footer_form input[type="email"],
+    .footer_form input[type="text"] {
+      display: inline-block;
+      padding: 11px 30px;
+      min-width: 320px; }
+      @media (max-width: 767px) {
+        .footer_form input[type="email"],
+        .footer_form input[type="text"] {
+          min-width: 280px; } }
+    .footer_form input[type="submit"] {
+      display: inline-block;
+      margin-left: 20px;
+      padding: 10px 48px;
+      color: #363637;
+      background: #fff; }
+      @media (max-width: 767px) {
+        .footer_form input[type="submit"] {
+          display: block;
+          margin: 10px auto; } }
+      .footer_form input[type="submit"]:hover {
+        cursor: pointer; }
 
 /*# sourceMappingURL=style.css.map */
