@@ -1,9 +1,15 @@
 .header {
+  position: fixed;
+  z-index: 10;
+  width: 100%;
   padding-bottom: 10px;
   font-family: montserrat-regular;
   font-size: 12px;
   color: #fff;
   background: #3853d8;
+  @media(max-width: 991px) {
+    position: relative;
+  }
   &_logo {
     float: left;
     margin-top: 20px;

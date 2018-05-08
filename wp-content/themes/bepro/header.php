@@ -53,3 +53,10 @@
         </div>
     </div>
 </header>
+<?php
+/*
+ * Load Banner Home Page
+ */
+    if( is_front_page() )
+       get_template_part( 'template-parts/content', 'slider-header-home' );
+?>

@@ -1,0 +1,21 @@
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &__radius {
+    border-radius: 20px;
+  }
+  &__blue {
+    background: $blue;
+  }
+  &__small {
+
+  }
+  &__big {
+    padding: 10px 45px;
+    font-size: 18px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    @media(max-width: 767px) {font-size:12px;}
+  }
+}
