@@ -1,0 +1,62 @@
+.bepro-featured {
+  ul.products li.product .button {
+    display: none;
+  }
+  ul.products li.product, .woocommerce-page ul.products li.product {
+    border: 1px solid #d3d3d3;
+    padding: 22px 25px;
+    width: 23.25%;
+    margin-right: 2.3%;
+    margin-bottom: 10px;
+    &:hover {
+      .popular-hover {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+  ul.products li.product .onsale {
+    top: 35px;
+    right: 22px;
+    min-height: 20px;
+    min-width: 50px;
+    border-radius: 5px;
+    line-height: 1.2;
+    z-index: 0;
+  }
+  ul.products li.product a img {
+    width: 62%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+a.popular-hover {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #232323;
+  color: #fff;
+  opacity: 0;
+  visibility: hidden;
+  @include transition(opacity .3s);
+  h4 {
+    margin: 25px auto 35px;
+    font-family: montserrat-bold;
+    font-size: 17px;
+    text-transform: uppercase;
+  }
+  .icon-fire {
+    color: $blue;
+    font-size: 48px;
+  }
+}

@@ -29,3 +29,9 @@ if (is_file( get_template_directory() . '/inc/widgets/bepro-widgets.php') )
  */
 if (is_file( get_template_directory() . '/inc/bepro-post-types.php') )
     require get_template_directory() . '/inc/bepro-post-types.php';
+
+/**
+ * Required WooCommerce Functions
+ */
+if (is_file( get_template_directory() . '/inc/woocommerce/bepro-woocommerce-function.php') )
+    require get_template_directory() . '/inc/woocommerce/bepro-woocommerce-function.php';

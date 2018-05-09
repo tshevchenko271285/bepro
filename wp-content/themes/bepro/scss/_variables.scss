@@ -1,1 +1,9 @@
 $blue: #3853d8;
+$gray: #999999;
+
+@mixin transition($transition...) {
+  -moz-transition:    $transition;
+  -o-transition:      $transition;
+  -webkit-transition: $transition;
+  transition:         $transition;
+}
