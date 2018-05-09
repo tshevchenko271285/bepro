@@ -5,7 +5,7 @@ Author: TShevchenko
 Author URI: http://tshevchenko.tk
 Description: Test Task For DevIT
 */
-div, ul, li,
+div, ul, li, p,
 h1, h2, h3, h4, h5, h6 {
   margin: 0;
   padding: 0; }
@@ -21,12 +21,7 @@ input, textarea, button {
     outline: 0;
     outline-offset: 0; }
 
-/*
-.container {
-  @media(min-width: 1200px) {max-width: 1170px;}
-}*/
 body {
-  background: #ccc;
   position: relative;
   min-width: 320px; }
 
@@ -53,7 +48,7 @@ body {
 
 @media (min-width: 1200px) {
   .container {
-    max-width: 1310px; } }
+    max-width: 1280px; } }
 
 /*
 ** Fonts
@@ -81,6 +76,9 @@ body {
   src: url("fonts/poppins-semibold.ttf"); }
 body {
   font-family: montserrat-regular; }
+
+h4 {
+  font-size: 18px; }
 
 h6 {
   font-family: montserrat-regular;
@@ -338,6 +336,27 @@ h6 {
       .banner-home_content h1 {
         font-size: 36px;
         margin-top: 0; } }
+
+.advantages_outer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 0;
+  border: 1px solid #d3d3d3;
+  background: #fff; }
+.advantages_item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 25%;
+  border-right: 1px solid #d3d3d3; }
+  .advantages_item:last-child {
+    border: 0; }
+.advantages_content h4 {
+  font-family: montserrat-regular; }
+.advantages_content p {
+  font-family: montserrat-light;
+  font-size: 14px; }
 
 .footer {
   font-family: montserrat-regular;

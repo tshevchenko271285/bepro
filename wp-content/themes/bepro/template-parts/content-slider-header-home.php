@@ -25,4 +25,46 @@
         wp_reset_postdata();
         ?>
     </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-12 advantages">
+                <div class="advantages_item">
+                    <div class="advantages_icon">
+                        <i class="icon-paper-plane"></i>
+                    </div>
+                    <div class="advantages_content">
+                        <h4>Free Shipping</h4>
+                        <p>Oders over $99</p>
+                    </div>
+                </div>
+                <div class="advantages_item">
+                    <div class="advantages_icon">
+                        <i class="icon-refresh"></i>
+                    </div>
+                    <div class="advantages_content">
+                        <h4>30 days return</h4>
+                        <p>If goods have problem</p>
+                    </div>
+                </div>
+                <div class="advantages_item">
+                    <div class="advantages_icon">
+                        <i class="icon-credit-card"></i>
+                    </div>
+                    <div class="advantages_content">
+                        <h4>Secure payment</h4>
+                        <p>100% secure payment</p>
+                    </div>
+                </div>
+                <div class="advantages_item">
+                    <div class="advantages_icon">
+                        <i class="icon-user"></i>
+                    </div>
+                    <div class="advantages_content">
+                        <h4>24h Support</h4>
+                        <p>Dedicated Support</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </section>

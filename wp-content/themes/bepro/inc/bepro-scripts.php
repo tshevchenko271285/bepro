@@ -4,6 +4,7 @@ function bepro_styles() {
     wp_enqueue_style( 'bepro-bootstrap-styles', get_template_directory_uri() . '/css/bootstrap.min.css' );
     wp_enqueue_style( 'bepro-fontawesome-styles', get_template_directory_uri() . '/css/fontawesome-all.min.css' );
     wp_enqueue_style( 'bepro-owl-carousel-styles', get_template_directory_uri() . '/css/owl.carousel.min.css' );
+    wp_enqueue_style( 'bepro-simple-line-icons-styles', get_template_directory_uri() . '/css/simple-line-icons.css' );
     wp_enqueue_style( 'bepro-owl-theme-styles', get_template_directory_uri() . '/css/owl.theme.default.min.css' );
     wp_enqueue_style( 'bepro-style', get_stylesheet_uri() );
 }

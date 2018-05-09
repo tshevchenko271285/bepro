@@ -1,9 +1,4 @@
-/*
-.container {
-  @media(min-width: 1200px) {max-width: 1170px;}
-}*/
 body {
-  background: #ccc;
   position: relative;
   min-width: 320px;
 }
@@ -25,6 +20,6 @@ body {
 }
 .container {
   @media(min-width: 1200px) {
-    max-width: 1310px;
+    max-width: 1280px;
   }
 }

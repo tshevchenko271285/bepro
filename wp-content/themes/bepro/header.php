@@ -59,4 +59,5 @@
  */
     if( is_front_page() )
        get_template_part( 'template-parts/content', 'slider-header-home' );
+       get_template_part( 'template-parts/content', 'our-advantages' );
 ?>

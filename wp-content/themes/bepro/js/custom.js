@@ -21,6 +21,7 @@ $(function(){
         items: 1,
         //loop: true,
         nav: true,
+        dots: false,
         navText: [
             '<i class="ion-ios-arrow-thin-left"></i>',
             '<i class="ion-ios-arrow-thin-right"></i>',
