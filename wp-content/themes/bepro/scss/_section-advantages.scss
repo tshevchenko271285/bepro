@@ -1,10 +1,15 @@
 .advantages {
+  position: absolute;
+  width: 100%;
+  bottom: -72px;
+  z-index: 1;
   &_outer {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 20px 0;
+    padding: 32px 0;
     border: 1px solid #d3d3d3;
+    border-radius: 5px;
     background: #fff;
   }
   &_item {
@@ -12,12 +17,16 @@
     justify-content: center;
     align-items: center;
     width: 25%;
+    padding: 15px 0;
     border-right: 1px solid #d3d3d3;
     &:last-child {
       border: 0;
     }
   }
   &_icon {
+    margin-right: 20px;
+    font-size: 35px;
+    color: #999999;
     i {
 
     }
@@ -25,10 +34,12 @@
   &_content {
     h4 {
       font-family: montserrat-regular;
+      font-weight: 600;
     }
     p {
       font-family: montserrat-light;
       font-size: 14px;
+      color: #999999;
     }
   }
 }

@@ -1,5 +1,6 @@
 .banner-home {
-
+    position: relative;
+    margin-bottom: 102px;
     &_slider {
         position: relative;
         img {
@@ -9,7 +10,7 @@
         .owl-nav {
             button.owl-prev, button.owl-next {
                 position: absolute;
-                top: 43%;
+                top: 44%;
             }
             button.owl-prev {
                 left: 100px;
