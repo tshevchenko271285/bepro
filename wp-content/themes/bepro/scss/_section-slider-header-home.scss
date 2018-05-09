@@ -1,6 +1,7 @@
 .banner-home {
     position: relative;
     margin-bottom: 102px;
+    @media(max-width: 767px) {margin-bottom: 0;}
     &_slider {
         position: relative;
         img {

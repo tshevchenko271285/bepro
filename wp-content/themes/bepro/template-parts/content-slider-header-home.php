@@ -40,26 +40,26 @@
                     <div class="col-12">
                         <div class="advantages_outer">
                         <?php while ( $advantages->have_posts() ) {
-                            $advantages->the_post(); ?>
-                                <?php $id = get_the_id(); ?>
-                                <div class="advantages_item">
-                                    <?php $icon = get_post_meta($id, 'advantagesIcon', true) ? get_post_meta($id, 'advantagesIcon', true) : ''; ?>
-                                    <?php if( $icon ) : ?>
-                                        <div class="advantages_icon">
-                                            <i class="<?php echo $icon; ?>"></i>
-                                        </div>
-                                    <?php endif; ?>
-                                    <div class="advantages_content">
-                                        <?php if( get_the_title() ) {
-                                            the_title('<h4>', '<h4>');
-                                        } ?>
-                                        <?php $text = get_post_meta($id, 'advantagesText', true) ? get_post_meta($id, 'advantagesText', true) : ''; ?>
-                                        <?php if( $text ) : ?>
-                                            <p><?php echo $text; ?></p>
-                                        <?php endif; ?>
+                        $advantages->the_post(); ?>
+                            <?php $id = get_the_id(); ?>
+                            <div class="advantages_item">
+                                <?php $icon = get_post_meta($id, 'advantagesIcon', true) ? get_post_meta($id, 'advantagesIcon', true) : ''; ?>
+                                <?php if( $icon ) : ?>
+                                    <div class="advantages_icon">
+                                        <i class="<?php echo $icon; ?>"></i>
                                     </div>
+                                <?php endif; ?>
+                                <div class="advantages_content">
+                                    <?php if( get_the_title() ) {
+                                        the_title('<h4>', '<h4>');
+                                    } ?>
+                                    <?php $text = get_post_meta($id, 'advantagesText', true) ? get_post_meta($id, 'advantagesText', true) : ''; ?>
+                                    <?php if( $text ) : ?>
+                                        <p><?php echo $text; ?></p>
+                                    <?php endif; ?>
                                 </div>
-                            <?php
+                            </div>
+                        <?php
                         }
                     }
                     wp_reset_postdata();

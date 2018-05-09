@@ -284,6 +284,9 @@ h6 {
 .banner-home {
   position: relative;
   margin-bottom: 102px; }
+  @media (max-width: 767px) {
+    .banner-home {
+      margin-bottom: 0; } }
   .banner-home_slider {
     position: relative; }
     .banner-home_slider img {
@@ -345,14 +348,22 @@ h6 {
   width: 100%;
   bottom: -72px;
   z-index: 1; }
+  @media (max-width: 767px) {
+    .advantages {
+      position: static;
+      padding: 15px 0; } }
   .advantages_outer {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-wrap: wrap;
     padding: 32px 0;
     border: 1px solid #d3d3d3;
     border-radius: 5px;
     background: #fff; }
+    @media (max-width: 991px) {
+      .advantages_outer {
+        padding: 0; } }
   .advantages_item {
     display: flex;
     justify-content: center;
@@ -360,6 +371,15 @@ h6 {
     width: 25%;
     padding: 15px 0;
     border-right: 1px solid #d3d3d3; }
+    @media (max-width: 991px) {
+      .advantages_item {
+        width: 50%;
+        padding: 10px; }
+        .advantages_item:nth-child(even) {
+          border: 0; } }
+    @media (max-width: 767px) {
+      .advantages_item {
+        width: 100%; } }
     .advantages_item:last-child {
       border: 0; }
   .advantages_icon {
