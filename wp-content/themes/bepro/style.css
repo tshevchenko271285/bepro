@@ -439,10 +439,13 @@ h6 {
           text-decoration: underline; }
   .new-products_category {
     padding: 48px 95px;
-    color: #fff; }
+    color: #fff;
+    background-size: cover;
+    background-position: 50% 50%; }
     .new-products_category h5 {
       margin-bottom: 10px;
-      text-transform: uppercase; }
+      text-transform: uppercase;
+      letter-spacing: 3px; }
   .new-products_label {
     display: inline-block;
     margin-bottom: 48px;

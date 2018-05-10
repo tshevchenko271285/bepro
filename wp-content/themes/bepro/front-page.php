@@ -6,6 +6,4 @@
 
 <?php get_template_part( 'template-parts/content', 'new-products' ); ?>
 
-<div style="height: 200px;background:#ccc;"></div>
-
 <?php get_footer(); ?>
