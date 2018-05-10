@@ -39,7 +39,8 @@
       padding-left: 35px;
       height: 100%;
       width: 260px;
-      background: #3853d8;
+      overflow: scroll;
+      background: $blue;
     }
     .menu-item {
       margin-right: 30px;
@@ -56,6 +57,7 @@
         left: 10px;
         list-style: none;
         transition: all .3s;
+        background: $blue;
         @media(max-width: 991px) {
           visibility: visible;
           opacity: 1;
@@ -66,6 +68,8 @@
         }
         .menu-item {
           white-space: nowrap;
+          padding: 10px 25px;
+          margin-right: 0;
         }
       }
     }
@@ -84,6 +88,7 @@
         .sub-menu {
           visibility: visible;
           opacity: 1;
+          background: $blue;
           @media(max-width: 991px) {
             height: auto;
           }

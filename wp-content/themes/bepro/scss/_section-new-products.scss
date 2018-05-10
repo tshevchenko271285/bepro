@@ -1,13 +1,90 @@
 .new-products {
+  margin-bottom: 25px;
   &_item {
+    display: block;
+    padding: 22px 25px;
+    border: 1px solid #d3d3d3;
     img {
-
+      display: block;
+      margin: 0 auto;
+      width: 65%;
+      height: auto;
     }
     h4 {
-
+      margin-top: 25px;
+      margin-bottom: 8px;
     }
     .price {
+      font-size: 14px;
+      font-weight: bold;
       color: $blue;
+      &:after {
+        content: ' USD';
+        display: inline-block;
+        margin-left: 5px;
+      }
+      del {
+        margin-right: 10px;
+        color: $gray;
+        &:after {
+          content: ' USD';
+          display: inline-block;
+          margin-left: 5px;
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+  &_category {
+    padding: 48px 95px;
+    color: #fff;
+    h5 {
+      margin-bottom: 10px;
+      text-transform: uppercase;
+    }
+    h3 {
+
+    }
+  }
+  &_label {
+    display: inline-block;
+    margin-bottom: 48px;
+    padding: 0 11px;
+    font-size: 13px;
+    line-height: 1.4;
+    font-weight: 700;
+    color: $blue;
+    border-radius: 5px;
+    background: #fff;
+  }
+  a.new-products_price {
+    display: inline-block;
+    background: #fff;
+    color: blue;
+    margin-top: 30px;
+    padding: 8px 30px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.7px;
+    .price:after {
+      content: 'USD \00a0\00a0|\00a0\00a0 buy now';
+      display: inline-block;
+      margin-left: 10px;
+      text-transform: uppercase;
+    }
+    del {
+      margin-right: 5px;
+      color: $gray;
+      &:after {
+        content: 'USD';
+        display: inline-block;
+        margin-left: 5px;
+        text-decoration: inherit;
+      }
+    }
+    ins {
+      text-decoration: none;
     }
   }
 }
