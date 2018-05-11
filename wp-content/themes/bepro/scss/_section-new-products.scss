@@ -1,9 +1,14 @@
 .new-products {
-  margin-bottom: 25px;
   &_item {
     display: block;
+    min-height: 275px;
     padding: 22px 25px;
+    margin-bottom: 25px;
     border: 1px solid #d3d3d3;
+    @media(max-width: 767px) {
+      padding: 10px;
+      min-height: 240px;
+    }
     img {
       display: block;
       margin: 0 auto;
@@ -13,11 +18,13 @@
     h4 {
       margin-top: 25px;
       margin-bottom: 8px;
+      @media(max-width: 767px) {text-align: center;}
     }
     .price {
       font-size: 14px;
       font-weight: bold;
       color: $blue;
+      @media(max-width: 767px) {text-align: center;}
       &:after {
         content: ' USD';
         display: inline-block;
@@ -26,6 +33,10 @@
       del {
         margin-right: 10px;
         color: $gray;
+        @media(max-width: 767px) {
+          display: block;
+          margin-right: 0;
+        }
         &:after {
           content: ' USD';
           display: inline-block;
@@ -37,9 +48,13 @@
   }
   &_category {
     padding: 48px 95px;
+    margin-bottom: 25px;
     color: #fff;
     background-size: cover;
     background-position: 50% 50%;
+    @media(max-width: 991px) {
+      padding: 25px;
+    }
     h5 {
       margin-bottom: 10px;
       text-transform: uppercase;
@@ -70,6 +85,9 @@
     font-size: 14px;
     font-weight: 700;
     letter-spacing: 0.7px;
+    @media(max-width: 767px) {
+      text-align: center;
+    }
     .price:after {
       content: 'USD \00a0\00a0|\00a0\00a0 buy now';
       display: inline-block;

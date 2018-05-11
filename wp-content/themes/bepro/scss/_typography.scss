@@ -8,6 +8,9 @@ h3 {
 h4 {
   font-family: playfairdisplay-regular;
   font-size: 18px;
+  @media(max-width: 767px) {
+    font-size: 14px;
+  }
 }
 h5 {
   font-size: 14px;

@@ -553,6 +553,10 @@ p.demo_store,
 			margin: 0;
 			font-family: playfairdisplay-regular;
 			font-size: 18px;
+			@media(max-width: 767px) {
+				text-align: center;
+				font-size: 14px;
+			}
 		}
 
 		a {
@@ -586,7 +590,7 @@ p.demo_store,
 			font-weight: bold;
 			margin-bottom: 0.5em;
 			font-size: 14px;
-
+			@media(max-width: 767px) {text-align: center;}
 			del {
 				color: $gray;
 				display: inline-block;
@@ -595,8 +599,9 @@ p.demo_store,
 					display: inline-block;
 					margin-right: 30px;
 					text-decoration: line-through;
+					@media(max-width: 767px){margin-right: 0;}
 				}
-			}
+ 			}
 
 			ins {
 				background: none;

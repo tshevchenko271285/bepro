@@ -1,7 +1,7 @@
 <?php
 $args= array(
     'post_type' => 'product',
-    'posts_per_page' => 2
+    'posts_per_page' => 3
 );
 $query = new WP_Query( $args );
 $row = 1;
@@ -17,7 +17,7 @@ if( $query->have_posts() ){ ?>
                         $image_id = get_term_meta( $term->term_id )['thumbnail_id'][0];
                         $image_url = wp_get_attachment_url( $image_id ) ? 'style="background-image:url(' . wp_get_attachment_url( $image_id ) . ')"' : '';
                         ?>
-                        <div class="col-md-9">
+                        <div class="col-md-8 col-lg-9">
                             <div class="new-products_category" <?php echo $image_url; ?>>
                                 <span class="new-products_label">new</span>
                                 <h5>lifestyle</h5>
@@ -27,8 +27,15 @@ if( $query->have_posts() ){ ?>
                                 </a>
                             </div>
                         </div>
-                    <?php elseif( $row === 2 ) : ?>
-                        <div class="d-none d-md-block col-md-3">
+                    <?php elseif( $row >= 2 ) : ?>
+                        <?php
+                            if($row == 2) {
+                                $class = 'd-md-none col-6 col-md-4 col-lg-3';
+                            } else {
+                                $class = 'col-6 col-md-4 col-lg-3';
+                            }
+                        ?>
+                        <div class="<?php echo $class;?>">
                             <a href="<?php echo get_the_permalink(); ?>" class="new-products_item">
                                 <?php the_post_thumbnail([954, 298]) ?>
                                 <?php the_title('<h4>','</h4>'); ?>
