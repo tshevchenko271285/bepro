@@ -59,6 +59,10 @@ a.popular-hover {
     font-family: montserrat-bold;
     font-size: 17px;
     text-transform: uppercase;
+    @media(max-width: 767px) {
+      font-size: 14px;
+      text-align: center;
+    }
   }
   .icon-fire {
     color: $blue;

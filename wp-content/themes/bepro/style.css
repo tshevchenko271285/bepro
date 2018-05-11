@@ -2781,6 +2781,10 @@ a.popular-hover {
     font-family: montserrat-bold;
     font-size: 17px;
     text-transform: uppercase; }
+    @media (max-width: 767px) {
+      a.popular-hover h4 {
+        font-size: 14px;
+        text-align: center; } }
   a.popular-hover .icon-fire {
     color: #3853d8;
     font-size: 48px; }
