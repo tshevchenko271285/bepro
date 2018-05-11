@@ -7,6 +7,10 @@
     border: 1px solid #d3d3d3;
     @media(max-width: 767px) {
       padding: 10px;
+      min-height: 290px;
+    }
+    @media(max-width: 575px) {
+      padding: 10px;
       min-height: 240px;
     }
     img {

@@ -599,6 +599,7 @@ p.demo_store,
 					display: inline-block;
 					margin-right: 30px;
 					text-decoration: line-through;
+					@media(max-width: 1199px){margin-right: 10px;}
 					@media(max-width: 767px){margin-right: 0;}
 				}
  			}
