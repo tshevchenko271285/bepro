@@ -519,6 +519,82 @@ h6 {
   .new-products a.new-products_price ins {
     text-decoration: none; }
 
+.home-products_item {
+  position: relative;
+  display: block;
+  min-height: 275px;
+  padding: 22px 25px;
+  margin-bottom: 25px;
+  border: 1px solid #d3d3d3; }
+  @media (max-width: 767px) {
+    .home-products_item {
+      padding: 10px;
+      min-height: 290px; } }
+  @media (max-width: 575px) {
+    .home-products_item {
+      padding: 10px;
+      min-height: 240px; } }
+  .home-products_item img {
+    display: block;
+    margin: 0 auto;
+    width: 65%;
+    height: auto; }
+  .home-products_item h4 {
+    margin-top: 25px;
+    margin-bottom: 8px; }
+    @media (max-width: 767px) {
+      .home-products_item h4 {
+        text-align: center; } }
+  .home-products_item .onsale {
+    position: absolute;
+    top: 30px;
+    right: 27px;
+    z-index: 0;
+    min-height: 20px;
+    min-width: 50px;
+    font-family: montserrat-bold;
+    font-size: 14px;
+    line-height: 1.3;
+    text-align: center;
+    color: white;
+    border-radius: 5px;
+    background-color: #3853d8; }
+  .home-products_item .price {
+    font-size: 14px;
+    font-weight: bold;
+    color: #3853d8; }
+    @media (max-width: 767px) {
+      .home-products_item .price {
+        text-align: center; } }
+    .home-products_item .price:after {
+      content: ' USD';
+      display: inline-block;
+      margin-left: 5px; }
+    .home-products_item .price del {
+      margin-right: 10px;
+      color: #999999; }
+      @media (max-width: 767px) {
+        .home-products_item .price del {
+          display: block;
+          margin-right: 0; } }
+      .home-products_item .price del:after {
+        content: ' USD';
+        display: inline-block;
+        margin-left: 5px;
+        text-decoration: underline; }
+.home-products_add-row {
+  margin: 22px auto 10px;
+  font-family: montserrat-bold;
+  text-transform: uppercase;
+  font-size: 14px;
+  text-align: center;
+  letter-spacing: 1px; }
+  .home-products_add-row:hover {
+    cursor: pointer; }
+  .home-products_add-row i {
+    margin-right: 10px;
+    color: #3853d8; }
+
 .footer {
   font-family: montserrat-regular;
   background: #363637;

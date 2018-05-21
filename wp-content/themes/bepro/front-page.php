@@ -6,4 +6,6 @@
 
 <?php get_template_part( 'template-parts/content', 'new-products' ); ?>
 
+<?php get_template_part( 'template-parts/content', 'home-products' ); ?>
+
 <?php get_footer(); ?>

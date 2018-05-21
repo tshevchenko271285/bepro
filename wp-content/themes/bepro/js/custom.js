@@ -28,3 +28,21 @@ $(function(){
         ]
     });
 });
+
+/*
+**  Ajax Loader Products On Home Page
+ */
+$(function(){
+    var btn = $('#homeProductsAdd'),
+        row = $('#homeProductsRow'),
+        count = row.find('.home-products_item').length;
+    btn.on('click', function(){
+        $.ajax({
+            method: "POST",
+            url: ajaxurl,
+            data: { action: "home_products", offset: count },
+        }).done(function( msg ) {
+            row.append(msg);
+        });
+    });
+});

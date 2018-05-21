@@ -35,3 +35,9 @@ if (is_file( get_template_directory() . '/inc/bepro-post-types.php') )
  */
 if (is_file( get_template_directory() . '/inc/woocommerce/bepro-woocommerce-function.php') )
     require get_template_directory() . '/inc/woocommerce/bepro-woocommerce-function.php';
+
+/**
+ * Required Functions For Ajax Queries
+ */
+if (is_file( get_template_directory() . '/inc/bepro-ajax-queries.php') )
+    require get_template_directory() . '/inc/bepro-ajax-queries.php';
