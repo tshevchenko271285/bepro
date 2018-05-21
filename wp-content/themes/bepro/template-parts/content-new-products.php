@@ -20,8 +20,8 @@ if( $query->have_posts() ){ ?>
                         <div class="col-md-8 col-lg-9">
                             <div class="new-products_category" <?php echo $image_url; ?>>
                                 <span class="new-products_label">new</span>
-                                <h5>lifestyle</h5>
-                                <h3><?php _e( 'New Now: ' ); echo $term->name?></h3>
+                                <h5><?php echo $term->name;?></h5>
+                                <h3><?php _e( 'New Now: ' ); the_title(); ?></h3>
                                 <a href="<?php the_permalink(); ?>" class="new-products_price">
                                     <?php woocommerce_template_single_price(); ?>
                                 </a>
