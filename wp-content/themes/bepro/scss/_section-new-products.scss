@@ -30,7 +30,6 @@
       color: $blue;
       @media(max-width: 767px) {text-align: center;}
       &:after {
-        content: ' USD';
         display: inline-block;
         margin-left: 5px;
       }
@@ -42,7 +41,6 @@
           margin-right: 0;
         }
         &:after {
-          content: ' USD';
           display: inline-block;
           margin-left: 5px;
           text-decoration: underline;
@@ -93,7 +91,7 @@
       text-align: center;
     }
     .price:after {
-      content: 'USD \00a0\00a0|\00a0\00a0 buy now';
+      content: '\00a0\00a0|\00a0\00a0 buy now';
       display: inline-block;
       margin-left: 10px;
       text-transform: uppercase;
@@ -102,7 +100,6 @@
       margin-right: 5px;
       color: $gray;
       &:after {
-        content: 'USD';
         display: inline-block;
         margin-left: 5px;
         text-decoration: inherit;

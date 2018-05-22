@@ -462,7 +462,6 @@ h6 {
       .new-products_item .price {
         text-align: center; } }
     .new-products_item .price:after {
-      content: ' USD';
       display: inline-block;
       margin-left: 5px; }
     .new-products_item .price del {
@@ -473,7 +472,6 @@ h6 {
           display: block;
           margin-right: 0; } }
       .new-products_item .price del:after {
-        content: ' USD';
         display: inline-block;
         margin-left: 5px;
         text-decoration: underline; }
@@ -514,7 +512,7 @@ h6 {
     .new-products a.new-products_price {
       text-align: center; } }
   .new-products a.new-products_price .price:after {
-    content: 'USD \00a0\00a0|\00a0\00a0 buy now';
+    content: '\00a0\00a0|\00a0\00a0 buy now';
     display: inline-block;
     margin-left: 10px;
     text-transform: uppercase; }
@@ -522,7 +520,6 @@ h6 {
     margin-right: 5px;
     color: #999999; }
     .new-products a.new-products_price del:after {
-      content: 'USD';
       display: inline-block;
       margin-left: 5px;
       text-decoration: inherit; }
@@ -577,7 +574,6 @@ h6 {
       .home-products_item .price {
         text-align: center; } }
     .home-products_item .price:after {
-      content: ' USD';
       display: inline-block;
       margin-left: 5px; }
     .home-products_item .price del {
@@ -588,7 +584,6 @@ h6 {
           display: block;
           margin-right: 0; } }
       .home-products_item .price del:after {
-        content: ' USD';
         display: inline-block;
         margin-left: 5px;
         text-decoration: underline; }
@@ -1410,7 +1405,6 @@ p.demo_store,
       color: #999999;
       display: inline-block; }
       .woocommerce ul.products li.product .price del:after {
-        content: ' USD';
         display: inline-block;
         margin-right: 30px;
         text-decoration: line-through; }

@@ -19,3 +19,10 @@ if ( ! function_exists( 'woocommerce_template_loop_product_featured_hover' ) ) {
     add_action( 'woocommerce_after_shop_loop_item', 'woocommerce_template_loop_product_featured_hover', 10 );
 }
 
+/*
+ * Added USD After Price
+ */
+add_filter('woocommerce_price_format', 'bepro_usd_after_price');
+function bepro_usd_after_price($price) {
+    return $price .= ' USD';
+}

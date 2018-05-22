@@ -595,7 +595,6 @@ p.demo_store,
 				color: $gray;
 				display: inline-block;
 				&:after {
-					content: ' USD';
 					display: inline-block;
 					margin-right: 30px;
 					text-decoration: line-through;

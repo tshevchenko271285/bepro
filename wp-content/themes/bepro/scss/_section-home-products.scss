@@ -46,7 +46,6 @@
       color: $blue;
       @media(max-width: 767px) {text-align: center;}
       &:after {
-        content: ' USD';
         display: inline-block;
         margin-left: 5px;
       }
@@ -58,7 +57,6 @@
           margin-right: 0;
         }
         &:after {
-          content: ' USD';
           display: inline-block;
           margin-left: 5px;
           text-decoration: underline;
