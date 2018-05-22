@@ -8,4 +8,6 @@
 
 <?php get_template_part( 'template-parts/content', 'home-products' ); ?>
 
+<?php get_template_part( 'template-parts/content', 'events' ); ?>
+
 <?php get_footer(); ?>

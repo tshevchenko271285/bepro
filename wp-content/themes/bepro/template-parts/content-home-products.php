@@ -10,7 +10,7 @@ if( $query->have_posts() ){ ?>
             <div id="homeProductsRow" class="row">
                 <?php while( $query->have_posts() ){ $query->the_post();?>
                     <?php global $product; ?>
-                    <div class="col-md-6 col-lg-3">
+                    <div class="col-sm-6 col-lg-3">
                         <a href="<?php echo get_the_permalink(); ?>" class="home-products_item">
                             <?php if( $product->is_on_sale() ) : ?>
                                 <span class="onsale">sale</span>

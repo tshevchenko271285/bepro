@@ -5,22 +5,23 @@ Author: TShevchenko
 Author URI: http://tshevchenko.tk
 Description: Test Task For DevIT
 */
-@import "_variables.scss";
-@import "_reset.scss";
-@import "_main.scss";
-@import "_fonts.scss";
-@import "_typography.scss";
-@import "_buttons.scss";
+@import "variables";
+@import "reset";
+@import "main";
+@import "fonts";
+@import "typography";
+@import "buttons";
 
-@import "_header.scss";
-@import "_header-menu.scss";
+@import "header";
+@import "header-menu";
 
-@import "_section-slider-header-home.scss";
-@import "_section-advantages.scss";
-@import "_section-new-products.scss";
-@import "_section-home-products.scss";
+@import "section-slider-header-home";
+@import "section-advantages";
+@import "section-new-products";
+@import "section-home-products";
+@import "section-events";
 
-@import "_footer.scss";
+@import "footer";
 
 
 @import "woocommerce/woocommerce.scss"; //TEST

@@ -1,6 +1,11 @@
 body {
   font-family: montserrat-regular;
 }
+h2 {
+  font-family: playfairdisplay-regular;
+  font-size: 36px;
+  @media(max-width: 767px) {font-size: 18px;}
+}
 h3 {
   font-family: playfairdisplay-bold;
   font-size: 30px;
@@ -8,15 +13,13 @@ h3 {
 h4 {
   font-family: playfairdisplay-regular;
   font-size: 18px;
-  @media(max-width: 767px) {
-    font-size: 14px;
-  }
+  @media(max-width: 767px) {font-size: 14px;}
 }
 h5 {
   font-size: 14px;
+  @media(max-width: 767px) {font-size: 10px;}
 }
 h6 {
-  //font-family: montserrat-regular;
   font-size: 12px;
   text-transform: uppercase;
   letter-spacing: 0.7px;

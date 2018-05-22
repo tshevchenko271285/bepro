@@ -19,7 +19,6 @@ $(function(){
 $(function(){
     $('#bannerSliderHome').owlCarousel({
         items: 1,
-        //loop: true,
         nav: true,
         dots: false,
         navText: [
@@ -44,5 +43,21 @@ $(function(){
         }).done(function( msg ) {
             row.append(msg);
         });
+    });
+});
+
+/*
+**  Init Slider Events
+ */
+$(function(){
+    $('#eventsSlider').owlCarousel({
+        items: 1,
+        loop: true,
+        nav: true,
+        dots: true,
+        navText: [
+            '<i class="fal fa-angle-left"></i>',
+            '<i class="fal fa-angle-right"></i>',
+        ]
     });
 });
