@@ -7,7 +7,8 @@ $query = new WP_Query( $args );
 if( $query->have_posts() ){ ?>
     <div class="home-products">
         <div class="container">
-            <div id="homeProductsRow" class="row">
+            <?php $count_products = wp_count_posts( 'product' ) ? 'data-products="' . wp_count_posts( 'product' )->publish . '"' : false; ?>
+            <div id="homeProductsRow" class="row" <?php echo $count_products; ?> >
                 <?php while( $query->have_posts() ){ $query->the_post();?>
                     <?php global $product; ?>
                     <div class="col-sm-6 col-lg-3">
@@ -20,7 +21,7 @@ if( $query->have_posts() ){ ?>
                             <?php woocommerce_template_single_price(); ?>
                         </a>
                     </div>
-                <?php }
+                <?php };
                 wp_reset_postdata(); ?>
             </div>
             <div id="homeProductsAdd" class="home-products_add-row"><i class="fas fa-sync-alt"></i> load more</div>

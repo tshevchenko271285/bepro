@@ -29,7 +29,7 @@ if( $query->have_posts() ){ ?>
                         </div>
                     <?php elseif( $row >= 2 ) : ?>
                         <?php
-                            if($row == 2) {
+                            if($row > 2) {
                                 $class = 'd-md-none col-6 col-md-4 col-lg-3';
                             } else {
                                 $class = 'col-6 col-md-4 col-lg-3';

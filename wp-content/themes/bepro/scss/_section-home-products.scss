@@ -79,5 +79,11 @@
       margin-right: 10px;
       color: $blue;
     }
+    &__disabled {
+      opacity: .3;
+      &:hover {
+        cursor: default;
+      }
+    }
   }
 }

@@ -11,8 +11,8 @@ if ( ! function_exists( 'woocommerce_template_loop_product_featured_hover' ) ) {
 
             <a href="<?php the_permalink() ?>" class="popular-hover">
                 <i class="icon-fire"></i>
-                <h4>Popular Product</h4>
-                <span>More Product <i class="ion-arrow-right-c"></i></span>
+                <h4><?php _e('Popular Product'); ?></h4>
+                <span><?php _e('More Product'); ?> <i class="ion-arrow-right-c"></i></span>
             </a>
         <?php }
     }

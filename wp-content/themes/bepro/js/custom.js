@@ -34,14 +34,19 @@ $(function(){
 $(function(){
     var btn = $('#homeProductsAdd'),
         row = $('#homeProductsRow'),
-        count = row.find('.home-products_item').length;
+        count;
     btn.on('click', function(){
+        count = row.find('.home-products_item').length;
         $.ajax({
             method: "POST",
             url: ajaxurl,
             data: { action: "home_products", offset: count },
         }).done(function( msg ) {
             row.append(msg);
+            count = row.find('.home-products_item').length;
+            if( row.data('products') == count ) {
+                btn.off('click').addClass('home-products_add-row__disabled');
+            }
         });
     });
 });
