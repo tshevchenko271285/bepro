@@ -1,0 +1,40 @@
+.random-products {
+  &_item {
+    display: block;
+    margin-bottom: 30px;
+    padding: 80px;
+    background-position: 50% 50%;
+    background-size: cover;
+    @media(max-width: 991px) {
+      padding: 25px;
+    }
+    h5 {
+      margin-bottom: 10px;
+      text-transform: uppercase;
+      color: #fff;
+    }
+    h3 {
+      min-height: 72px;
+      margin-bottom: 40px;
+      color: #fff;
+    }
+
+  }
+  &_price {
+    position: relative;
+    margin-left: 10px;
+    color: #fff;
+    &:before {
+      content: '';
+      position: absolute;
+      top: 9px;
+      left: -10px;
+      display: block;
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background: #fff;
+    }
+    .woocommerce-Price-currencySymbol {display: none;}
+  }
+}

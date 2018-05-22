@@ -683,6 +683,40 @@ h6 {
     .events .owl-dots .owl-dot.active {
       background: #fff; }
 
+.random-products_item {
+  display: block;
+  margin-bottom: 30px;
+  padding: 80px;
+  background-position: 50% 50%;
+  background-size: cover; }
+  @media (max-width: 991px) {
+    .random-products_item {
+      padding: 25px; } }
+  .random-products_item h5 {
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    color: #fff; }
+  .random-products_item h3 {
+    min-height: 72px;
+    margin-bottom: 40px;
+    color: #fff; }
+.random-products_price {
+  position: relative;
+  margin-left: 10px;
+  color: #fff; }
+  .random-products_price:before {
+    content: '';
+    position: absolute;
+    top: 9px;
+    left: -10px;
+    display: block;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: #fff; }
+  .random-products_price .woocommerce-Price-currencySymbol {
+    display: none; }
+
 .footer {
   font-family: montserrat-regular;
   background: #363637;

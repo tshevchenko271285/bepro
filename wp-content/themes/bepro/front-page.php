@@ -10,4 +10,6 @@
 
 <?php get_template_part( 'template-parts/content', 'events' ); ?>
 
+<?php get_template_part( 'template-parts/content', 'random-products' ); ?>
+
 <?php get_footer(); ?>
