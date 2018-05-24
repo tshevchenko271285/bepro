@@ -19,9 +19,9 @@ get_header(); ?>
                     the_title('<h1>', '</h1>');
                     the_post_thumbnail([400, 300]);
                     the_content();
-                    if(function_exists('the_ratings')) {
-                        the_ratings();
-                    }
+//                    if(function_exists('the_ratings')) {
+//                        the_ratings();
+//                    }
                 }
                 get_template_part( 'content', get_post_format() );
 

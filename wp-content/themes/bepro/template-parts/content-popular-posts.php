@@ -18,14 +18,13 @@
                 $args = array(
                     'posts_per_page' => 3,
                     'post_type' => 'post',
+                    'meta_key' => 'bepro_post_views_count',
+                    'orderby' => 'bepro_post_views_count',
+                    'order' => 'DESC'
                 );
                 $posts = get_posts( $args );
                 $item = 0;
-
-
-                wp_reset_postdata(); // сброс
                 ?>
-
                    <!-- Start Slider -->
                     <div id="popularPostsSlider" class="popular-posts_slider">
                  <?php
@@ -34,22 +33,68 @@
                             <!--Start Item-->
                             <div class="popular-posts_item">
                                 <div class="popular-posts_left">
-                                    <div class="popular-posts_item-big"><?php echo $item; ?></div>
+                                    <?php $image = has_post_thumbnail() ? 'style="background-image: url(' . wp_get_attachment_image_url( get_post_thumbnail_id() , 'large' ) . ')"' : ''; ?>
+                                    <a href="<?php the_permalink(); ?>" class="popular-posts_item-big" <?php echo $image; ?> >
+                                        <div class="popular-posts_item-big-date">
+                                            <i class="far fa-clock"></i>
+                                            <?php _e('Date: '); ?>
+                                            <?php echo get_the_date(); ?>
+                                        </div>
+                                        <h4><?php the_title(); ?></h4>
+                                        <div class="popular-posts_item-big-details">
+                                            <span class="popular-posts_item-big-comment">
+                                                <i class="fas fa-comments"></i>
+                                                <?php echo get_comments_number() ? sprintf("%02d", get_comments_number()) : 0; ?>
+                                            </span>
+                                            <span class="popular-posts_item-big-details-separator">|</span>
+                                            <span class="popular-posts_item-big-likes">
+                                                <i class="fas fa-heart"></i>
+                                                <?php echo get_post_meta(get_the_ID(), '_liked', true) ? get_post_meta(get_the_ID(), '_liked', true) : 0;?>
+                                            </span>
+                                        </div>
+                                    </a>
                                 </div><!-- Left -->
                                 <div class="popular-posts_right">
                         <?php } else { ?>
-                                        <div class="popular-posts_item-small"><?php echo $item; ?></div>
+                            <a href="<?php the_permalink()?>" class="popular-posts_item-small">
+                                <div class="popular-posts_item-small-image">
+                                    <?php the_post_thumbnail([100, 100])?>
+                                </div>
+                                <div class="popular-posts_item-small-content">
+                                    <div class="popular-posts_item-small-date">
+                                        <i class="far fa-clock"></i>
+                                        <?php _e('Date: '); ?>
+                                        <?php echo get_the_date(); ?>
+                                    </div>
+                                    <h4><?php echo wp_trim_words( get_the_title(), 4, '' ); ?></h4>
+                                    <div class="popular-posts_item-small-details">
+                                        <span class="popular-posts_item-small-comment">
+                                            <i class="fas fa-comments"></i>
+                                            <?php echo get_comments_number() ? sprintf("%02d", get_comments_number()) : 0; ?>
+                                        </span>
+                                        <span class="popular-posts_item-small-details-separator">|</span>
+                                        <span class="popular-posts_item-small-likes">
+                                            <i class="fas fa-heart"></i>
+                                            <?php echo get_post_meta(get_the_ID(), '_liked', true) ? get_post_meta(get_the_ID(), '_liked', true) : 0;?>
+                                        </span>
+                                    </div>
+                                </div>
+                            </a>
                         <?php } ?>
-                        <?php if ( !isset( $posts[++$key] ) || $item === 2 )  { // Close Item Slider
-                             ?> </div> <!--Right--> <?php
-                            $item = 0;
+                        <?php
+                            if ( !isset( $posts[++$key] ) || $item === 2 )  { // Close Item Slider
                         ?>
-                            </div><!-- End Item -->
+                                <a href="<?php echo get_post_type_archive_link( get_post_type() ); ?>" class="popular-posts_right-archive-link">View all <i class="far fa-long-arrow-right"></i></a>
+                                </div> <!--Right-->
+                            <?php
+                                $item = 0;
+                            ?>
+                        </div><!-- End Item -->
                         <?php } else {
                             $item++;
                         }
-
                     }
+                    wp_reset_postdata(); // сброс
                  ?>
                 </div><!-- End Slider -->
             </div><!--Popular Posts-->
