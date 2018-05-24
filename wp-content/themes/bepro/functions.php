@@ -41,3 +41,9 @@ if (is_file( get_template_directory() . '/inc/woocommerce/bepro-woocommerce-func
  */
 if (is_file( get_template_directory() . '/inc/bepro-ajax-queries.php') )
     require get_template_directory() . '/inc/bepro-ajax-queries.php';
+
+/**
+ * Required Functions Adds Meta fields
+ */
+if (is_file( get_template_directory() . '/inc/bepro-post-meta.php') )
+    require get_template_directory() . '/inc/bepro-post-meta.php';

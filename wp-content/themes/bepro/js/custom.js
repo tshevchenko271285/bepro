@@ -66,3 +66,20 @@ $(function(){
         ]
     });
 });
+
+/*
+**  Init Slider Logotypes
+ */
+$(function(){
+    $('#logotypesSlider').owlCarousel({
+        items: 4,
+        loop: true,
+        nav: true,
+        dots: false,
+        navText: [
+            '<i class="fal fa-angle-left"></i>',
+            '<i class="fal fa-angle-right"></i>',
+        ]
+    });
+});
+

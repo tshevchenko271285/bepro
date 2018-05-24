@@ -12,4 +12,8 @@
 
 <?php get_template_part( 'template-parts/content', 'random-products' ); ?>
 
+<?php get_template_part( 'template-parts/content', 'popular-posts' ); ?>
+
+<?php get_template_part( 'template-parts/content', 'logotypes' ); ?>
+
 <?php get_footer(); ?>

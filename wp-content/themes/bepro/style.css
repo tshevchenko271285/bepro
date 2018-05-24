@@ -717,6 +717,38 @@ h6 {
   .random-products_price .woocommerce-Price-currencySymbol {
     display: none; }
 
+.logotypes_slider {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+  padding: 40px;
+  position: relative; }
+  .logotypes_slider .owl-stage {
+    display: flex;
+    align-items: center; }
+  .logotypes_slider .owl-nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 45px;
+    font-size: 45px; }
+    .logotypes_slider .owl-nav button.owl-prev:hover, .logotypes_slider .owl-nav button.owl-next:hover {
+      color: #1e55fa; }
+.logotypes_item {
+  max-width: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto; }
+  .logotypes_item img {
+    height: 100%;
+    width: auto; }
+
 .footer {
   font-family: montserrat-regular;
   background: #363637;
