@@ -72,14 +72,50 @@ $(function(){
  */
 $(function(){
     $('#logotypesSlider').owlCarousel({
-        items: 4,
+        items: 1,
         loop: true,
-        nav: true,
+        nav: false,
         dots: false,
         navText: [
             '<i class="fal fa-angle-left"></i>',
             '<i class="fal fa-angle-right"></i>',
-        ]
+        ],
+        responsive : {
+            1200 : {
+                items: 4,
+                nav: true,
+            },
+            991 : {
+                items: 3,
+                nav: true,
+            },
+            575 : {
+                items: 2,
+            }
+        },
+
+    });
+});
+
+
+/*
+**  Init Slider Popular Posts
+ */
+$(function(){
+    var slider = $('#popularPostsSlider');
+    slider.owlCarousel({
+        items: 1,
+        loop: true,
+        nav: false,
+        dots: false,
+    });
+    // Override Next Button
+    $('#popularPostNext').on('click', function(){
+        slider.find('.owl-next').click();
+    });
+    // Override Prev Button
+    $('#popularPostPrev').on('click', function(){
+        slider.find('.owl-prev').click();
     });
 });
 
