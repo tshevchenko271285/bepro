@@ -1,9 +1,13 @@
 .popular-posts {
   &_header {
-
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid #d5d5d6;
+    border-bottom: 0;
   }
   &_buttons {
-
+    display: flex;
   }
   &_prev {
 
@@ -12,9 +16,15 @@
 
   }
   &_slider {
-
+    border: 1px solid #d5d5d6;
   }
   &_item {
+    display: flex;
+  }
+  &_left {
+
+  }
+  &_right {
 
   }
 

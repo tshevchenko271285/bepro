@@ -749,6 +749,19 @@ h6 {
     height: 100%;
     width: auto; }
 
+.popular-posts_header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid #d5d5d6;
+  border-bottom: 0; }
+.popular-posts_buttons {
+  display: flex; }
+.popular-posts_slider {
+  border: 1px solid #d5d5d6; }
+.popular-posts_item {
+  display: flex; }
+
 .footer {
   font-family: montserrat-regular;
   background: #363637;
