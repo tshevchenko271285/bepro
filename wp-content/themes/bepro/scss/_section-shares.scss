@@ -1,0 +1,37 @@
+.share {
+  min-height: 100%;
+  padding: 50px;
+  text-align: center;
+  color: #fff;
+  background-position: 50% 50%;
+  background-size: cover;
+  @media(max-width: 1199px) and (min-width: 992px) {
+    padding: 20px;
+  }
+  h6 {
+    margin-bottom: 70px;
+    letter-spacing: 2px;
+  }
+  h4 {
+    margin-bottom: 85px;
+    line-height: 30px;
+    font-size: 24px;
+  }
+  &_number-of-day {
+    display: block;
+    margin-bottom: 35px;
+    font-family: playfairdisplay-regular;
+    font-size: 100px;
+    line-height: 100px;
+  }
+  a.share_btn {
+    display: inline-block;
+    padding: 10px 25px;
+    font-family: poppins-semibold;
+    font-size: 12px;
+    letter-spacing: .5px;
+    color: #fff;
+    border-radius: 20px;
+    background: $blue;
+  }
+}

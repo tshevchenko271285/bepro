@@ -749,6 +749,9 @@ h6 {
     height: 100%;
     width: auto; }
 
+@media (max-width: 991px) {
+  .popular-posts {
+    margin-top: 20px; } }
 .popular-posts_header {
   display: flex;
   align-items: center;
@@ -870,6 +873,39 @@ h6 {
       .popular-posts_item-small-details-separator {
         display: inline-block;
         margin: 0 12px; }
+
+.share {
+  min-height: 100%;
+  padding: 50px;
+  text-align: center;
+  color: #fff;
+  background-position: 50% 50%;
+  background-size: cover; }
+  @media (max-width: 1199px) and (min-width: 992px) {
+    .share {
+      padding: 20px; } }
+  .share h6 {
+    margin-bottom: 70px;
+    letter-spacing: 2px; }
+  .share h4 {
+    margin-bottom: 85px;
+    line-height: 30px;
+    font-size: 24px; }
+  .share_number-of-day {
+    display: block;
+    margin-bottom: 35px;
+    font-family: playfairdisplay-regular;
+    font-size: 100px;
+    line-height: 100px; }
+  .share a.share_btn {
+    display: inline-block;
+    padding: 10px 25px;
+    font-family: poppins-semibold;
+    font-size: 12px;
+    letter-spacing: .5px;
+    color: #fff;
+    border-radius: 20px;
+    background: #3853d8; }
 
 .footer {
   font-family: montserrat-regular;

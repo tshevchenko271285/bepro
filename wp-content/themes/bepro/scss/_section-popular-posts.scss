@@ -1,4 +1,5 @@
 .popular-posts {
+  @media(max-width: 991px) {margin-top: 20px;}
   &_header {
     display: flex;
     align-items: center;

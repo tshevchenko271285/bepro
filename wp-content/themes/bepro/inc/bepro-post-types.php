@@ -122,3 +122,34 @@ function bepro_register_post_type_logotypes(){
         'query_var'           => true,
     ) );
 }
+
+/*
+ * Register Custom Post Type Shares
+ */
+add_action('init', 'bepro_register_post_type_shares');
+function bepro_register_post_type_shares(){
+        register_post_type('shares', array(
+        'label'  => null,
+        'labels' => array(
+            'name'               => 'Shares', // основное название для типа записи
+            'singular_name'      => 'Share', // название для одной записи этого типа
+            'add_new'            => 'Add Share', // для добавления новой записи
+            'add_new_item'       => 'Add New Share', // заголовка у вновь создаваемой записи в админ-панели.
+            'edit_item'          => 'Write', // для редактирования типа записи
+            'new_item'           => 'New Shares', // текст новой записи
+            'view_item'          => 'View', // для просмотра записи этого типа.
+            'search_items'       => 'Search', // для поиска по этим типам записи
+            'not_found'          => 'Not Find', // если в результате поиска ничего не было найдено
+            'not_found_in_trash' => 'Not find in trash', // если не было найдено в корзине
+            'parent_item_colon'  => '', // для родителей (у древовидных типов)
+            'menu_name'          => 'Shares', // название меню
+        ),
+        'public'              => true,
+        'hierarchical'        => false,
+        'supports'            => array('title', 'thumbnail', 'custom-fields'), // 'title','editor','author','thumbnail','excerpt','trackbacks','custom-fields','comments','revisions','page-attributes','post-formats'
+        'taxonomies'          => array(),
+        'has_archive'         => false,
+        'rewrite'             => true,
+        'query_var'           => true,
+    ) );
+}

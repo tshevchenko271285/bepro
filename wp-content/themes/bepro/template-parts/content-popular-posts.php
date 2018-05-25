@@ -1,6 +1,34 @@
 <div class="container">
     <div class="row">
-        <div class="col-md-4 col-lg-3"></div>
+        <div class="col-md-4 col-lg-3">
+            <?php
+            $args = array(
+                'posts_per_page' => 1,
+                'post_type' => 'shares',
+            );
+            $shares = new WP_Query( $args );
+            if ( $shares->have_posts() ) { ?>
+                <?php while ( $shares->have_posts() ) {
+                    $shares->the_post(); ?>
+                    <?php $share_image = has_post_thumbnail() ? 'style="background-image: url(' . wp_get_attachment_image_url( get_post_thumbnail_id(), array(298, 500) ) . ')"' : ''; ?>
+                    <div class="share" <?php echo $share_image; ?> >
+                        <h6><?php _e('Number of Day'); ?></h6>
+                        <?php $share_date = get_post_meta(get_the_ID(), 'share_date', true) ? get_post_meta(get_the_ID(), 'share_date', true) : '';
+                        if( $share_date ) {
+                            $number_of_day = floor((strtotime($share_date) - time()) / (60 * 60 * 24));
+                        }
+                        ?>
+                        <span class="share_number-of-day">
+                            <?php echo $number_of_day; ?>
+                        </span>
+                        <h4><?php the_title(); ?></h4>
+                        <a href="<?php the_permalink();?>" class="share_btn"><?php _e('Read More');?></a>
+                    </div>
+                <?php }
+                }
+            wp_reset_postdata();
+            ?>
+        </div>
         <div class="col-md-8 col-lg-9">
             <div class="popular-posts">
                 <div class="popular-posts_header">

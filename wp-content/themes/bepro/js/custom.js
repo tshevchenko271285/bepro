@@ -105,6 +105,7 @@ $(function(){
     var slider = $('#popularPostsSlider');
     slider.owlCarousel({
         items: 1,
+        margin: 10,
         loop: true,
         nav: false,
         dots: false,
