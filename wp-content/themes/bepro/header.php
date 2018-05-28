@@ -43,16 +43,17 @@
         </div>
         <div class="header_buttons">
             <div class="header_buttons-left">
-                <a href="<?php echo wp_login_url();?>">Log in</a>
+                <a href="<?php echo get_permalink( get_option('woocommerce_myaccount_page_id') ); ?>">Log in</a>
                 <a href="<?php echo wp_registration_url();?>">Sign Up</a>
             </div>
             <div class="header_buttons-right">
-                <a href="#"><i class="ion-bag"><span>2</span></i></a>
+                <a href="<?php echo WC()->cart->get_cart_url(); ?>"><i class="ion-bag"><span><?php echo WC()->cart->get_cart_contents_count()?></span></i></a>
                 <a href="#"><i class="ion-ios-search"></i></a>
             </div>
         </div>
     </div>
 </header>
+<div style="height: 68px;"></div>
 <?php
 /*
  * Load Banner Home Page
