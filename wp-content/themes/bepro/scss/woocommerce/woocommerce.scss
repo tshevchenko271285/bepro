@@ -83,7 +83,6 @@ p.demo_store,
 		text-decoration: none;
 		font-weight: 700;
 		border: 0;
-
 		&:hover {
 			color: #fff !important; // Required for default theme compatibility
 			background: red;
@@ -101,7 +100,7 @@ p.demo_store,
 		@include clearfix();
 		margin: 0;
 		margin-bottom: -90px;
-		padding: 50px 0 140px;
+		padding: 50px 0 135px;
 		font-size: 14px;
 		text-align: center;
 		color: #ffffff;
@@ -120,17 +119,63 @@ p.demo_store,
 			color: #ffffff;
 		}
 	}
-
-	.quantity .qty {
-		width: 3.631em;
-		text-align: center;
+	.variations_button {
+		.quantity {
+			padding: 7px 0;
+			position: relative;
+			overflow: hidden;
+			border-radius: 20px;
+			border: 1px solid #d9d9d9;
+			background: #f7f7f7;
+			.fa-plus, .fa-minus {
+				display: flex;
+				align-items: center;
+				position: absolute;
+				top: 0;
+				bottom: 0;
+				font-size: 10px;
+				&:hover {
+					cursor: pointer;
+				}
+			}
+			.fa-minus {
+				left: 15px;
+			}
+			.fa-plus {
+				right: 15px;
+			}
+		}
+		.quantity .qty {
+			display: block;
+			width: 90px;
+			text-align: center;
+			font-family: poppins-semibold;
+			font-size: 12px;
+			background: rgba(0,0,0,0);
+			&::-webkit-inner-spin-button,
+			&::-webkit-outer-spin-button {
+				-webkit-appearance: none;
+				-moz-appearance: none;
+				appearance: none;
+				margin: 0;
+			}
+		}
 	}
+
 
 	/**
 	 * Product Page
 	 */
 	.bepro-product-outer {
 		background: #fff;
+		padding: 137px 80px 0;
+		#wc-stripe-payment-request-wrapper {display:none;}
+		//div.product form.cart .button {
+		//	background-color: #3853d8;
+		//	&:before {
+		//		content: '+ ';
+		//	}
+		//}
 	}
 	div.product {
 		margin-bottom: 0;
@@ -139,6 +184,7 @@ p.demo_store,
 		.product_title {
 			clear: none;
 			margin-top: 0;
+			margin-bottom: 25px;
 			padding: 0;
 		}
 
@@ -147,6 +193,10 @@ p.demo_store,
 			font-size: 14px;
 			padding-left: 5px;
 			letter-spacing: 0.5px;
+			float: left;
+			display: flex;
+			flex-direction: row-reverse;
+			justify-content: flex-end;
 			ins {
 				background: inherit;
 				font-weight: 700;
@@ -172,7 +222,7 @@ p.demo_store,
 		}
 
 		.woocommerce-product-rating {
-			margin-bottom: 1.618em;
+			margin-bottom: 10px;
 		}
 
 		div.images {
@@ -295,6 +345,14 @@ p.demo_store,
 
 		div.summary {
 			margin-bottom: 2em;
+			h5 {
+				margin-bottom: 10px;
+				font-size: 14px;
+				font-weight: 700;
+				text-transform: uppercase;
+				letter-spacing: 2.2px;
+				color: #3853d8;
+			}
 		}
 
 		div.social {
@@ -449,7 +507,12 @@ p.demo_store,
 				margin-bottom: 1em;
 				border: 0;
 				width: 100%;
-
+				tbody {
+					display: flex;
+				}
+				.value {
+					display: block;
+				}
 				td,
 				th {
 					border: 0;
@@ -458,7 +521,16 @@ p.demo_store,
 				}
 
 				label {
+					min-width: 230px;
+					margin-bottom: 18px;
+					font-family: montserrat-bold;
+					text-transform: uppercase;
+					font-size: 12px;
+					letter-spacing: 2.5px;
 					font-weight: 700;
+					&:after {
+						content: ':';
+					}
 				}
 
 				select {
@@ -745,13 +817,23 @@ p.demo_store,
 		}
 
 		&.alt {
-			background-color: $primary;
-			color: $primarytext;
+			padding: 10px 15px;
+			background-color: #3853d8;
+			font-family: poppins-semibold;
+			font-size: 12px;
+			text-transform: capitalize;
+			border-radius: 20px;
+			color: #fff;
 			-webkit-font-smoothing: antialiased;
-
+			&:before {
+				content: '+';
+				font-size: 16px;
+				margin-right: 10px;
+			}
 			&:hover {
-				background-color: $primary - #111;
-				color: $primarytext;
+				background-color: #fff;
+				border: 1px solid #3853d8;
+				color: #3853d8;
 			}
 
 			&.disabled,
@@ -917,8 +999,8 @@ p.demo_store,
 		font-family: 'star';
 
 		&::before {
-			content: '\73\73\73\73\73';
-			color: darken( $secondary, 10% );
+			content: '\53 \00a0 \53 \00a0 \53 \00a0 \53 \00a0 \53';
+			color: #cccccc;
 			float: left;
 			top: 0;
 			left: 0;
@@ -932,10 +1014,11 @@ p.demo_store,
 			left: 0;
 			position: absolute;
 			padding-top: 1.5em;
+			color: #f2b309;
 		}
 
 		span::before {
-			content: '\53\53\53\53\53';
+			content: '\53 \00a0 \53 \00a0 \53 \00a0 \53 \00a0 \53';
 			top: 0;
 			position: absolute;
 			left: 0;
@@ -946,10 +1029,15 @@ p.demo_store,
 		@include clearfix();
 		line-height: 2;
 		display: block;
+		font-size: 14px;
+		font-weight: 700;
+		color: #999999;
 
 		.star-rating {
-			margin: 0.5em 4px 0 0;
+			min-width: 90px;
+			margin: 0.5em 13px 0 0;
 			float: left;
+			font-size: 14px;
 		}
 	}
 
@@ -2225,3 +2313,53 @@ body:not( .search-results ) .twentysixteen .entry-summary {
 }
 
 @import 'bepro-featured';
+
+/*
+**	Styles For Plugin Yith Woocommerce Colors And Labels Variations
+ */
+.select_option {
+	position: relative;
+}
+.attribute_pa_color {
+	.select_option ,
+	.select_option span {
+		border: 0;
+		border-radius: 50%;
+		width: 25px;
+		height: 25px;
+		margin-right: 15px;
+	}
+	.select_option.selected {
+		box-shadow: 0 0 10px #ccc;
+		&:before {
+			content: '\f00c';
+			font-family: "Font Awesome\ 5 Pro";
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			left: 0;
+			right: 0;
+			color: #535353;
+		}
+	}
+}
+.attribute_pa_size {
+	.select_option {
+		border: 0;
+		font-size: 14px;
+		font-weight: 700;
+		span {
+			margin-right: 5px;
+			text-align: left;
+			line-height: 20px;
+		}
+	}
+	.select_option.selected {
+		color: #6072dd;
+		font-size: 14px;
+	}
+}
+.reset_variations {display: none !important;}

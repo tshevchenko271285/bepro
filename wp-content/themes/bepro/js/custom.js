@@ -120,3 +120,11 @@ $(function(){
     });
 });
 
+$(function(){
+    $('.variations_button .quantity > .fa-plus').on('click', function(){
+        var $this = $(this);
+        var $input = $this.siblings('input[type="number"]');
+        var value = $input.val()*1;
+        $input.val( value+1 );
+    });
+});

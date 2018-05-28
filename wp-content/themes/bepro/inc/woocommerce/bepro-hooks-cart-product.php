@@ -14,11 +14,17 @@ function bepro_cart_breadcrumb($args){
     $args['delimiter'] = '<i class="fas fa-caret-right"></i>';
     return $args;
 }
+/*
+ * Deleted Sale Lable
+ */
+remove_action('woocommerce_before_single_product_summary', 'woocommerce_show_product_sale_flash', 10);
 
 /*
  * Deleted Category And SKU
  */
 remove_action('woocommerce_single_product_summary', 'woocommerce_template_single_meta', 40);
+
+
 /*
  * Adds Category Name Before Product Title
  */
@@ -37,7 +43,19 @@ function bepro_cart_category(){
  * Deleted Price
  */
 remove_action('woocommerce_single_product_summary', 'woocommerce_template_single_price', 10);
+//add_action('woocommerce_single_product_summary', 'woocommerce_template_single_price', 39);
+
 /*
  * Deleted Excerpt
  */
 remove_action('woocommerce_single_product_summary', 'woocommerce_template_single_excerpt', 20);
+
+/*
+ * Shows Price With Out USD
+ */
+if( is_single() ) {
+    add_filter('woocommerce_price_format', 'bepro_deleted_usd_after_price');
+    function bepro_deleted_usd_after_price($price) {
+        return $price = substr($price,0,-4);
+    }
+}
